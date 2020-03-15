@@ -1,4 +1,4 @@
-package cn.hust.tcptest;
+package cn.hust.tcp;
 
 import java.io.*;
 import java.net.Inet4Address;
@@ -37,6 +37,7 @@ public class TCPClient {
 
         socket.close();
 
+
         System.out.println("客户端已退出～");
 
 
@@ -73,6 +74,7 @@ public class TCPClient {
             }
 
            System.out.println(echo);
+          //  client.shutdownInput();
 
         }
 
@@ -80,6 +82,8 @@ public class TCPClient {
         bufferedReader.close();
         printStream.close();
         socketBufferedReader.close();
+
+
 
 
     }

@@ -1,4 +1,4 @@
-package cn.hust.tcptest;
+package cn.hust.tcp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,6 +21,8 @@ public class TCPServer {
         ServerSocket server = new ServerSocket();
 
         server.bind(new InetSocketAddress(Inet4Address.getLocalHost(),2000));
+
+
         System.out.println("服务器端地址:"+ server.getLocalSocketAddress() + ",服务器端端口号:" + server.getLocalPort());
 
 
@@ -63,6 +65,7 @@ public class TCPServer {
                  while(true){
                      //接收客户端发送的数据
                      String string = clientInput.readLine();
+
 
                      if("bye".equals(string)){
                          clientOutput.println("bye");
